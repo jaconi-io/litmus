@@ -1,0 +1,27 @@
+apiVersion: litmuchaos.io/v1alpha1
+kind: ChartServiceVersion
+metadata:
+  name: gcp
+  version: 0.1.0
+  annotations:
+    categories: gcp
+spec:
+  displayName: GCP
+  categoryDescription: Chaos Engineering for GCP
+  experiments:
+    - gcp-vm-stop
+  keywords:
+    - "gcp"
+  maintainers:
+    - name: Julian Nodorp
+      email: jnodorp@jaconi.io
+  minKubeVersion: 1.12.0
+  provider:
+    name: jaconi
+  links:
+    - name: Documentation
+      url: https://docs.litmuschaos.io/docs/getstarted/
+  icon:
+    - url: https://raw.githubusercontent.com/jaconi-io/litmus/main/charts/gcp/icons/gcp.png
+      mediatype: image/png
+  chaosexpcrdlink: https://raw.githubusercontent.com/jaconi-io/litmus/main/charts/gcp/experiments.yaml

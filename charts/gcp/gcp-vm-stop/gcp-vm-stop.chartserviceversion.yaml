@@ -1,0 +1,34 @@
+apiVersion: litmuchaos.io/v1alpha1
+kind: ChartServiceVersion
+metadata:
+  name: gcp-vm-stop
+  version: 0.1.0
+  annotations:
+    categories: gcp
+spec:
+  displayName: gcp-vm-stop
+  categoryDescription: |
+    Stop a virtual machine instance. Additionally a IAM service account is required. yada, yada...
+  keywords:
+    - "gcp"
+    - "vm"
+    - "stop"
+  platforms:
+    - "GCP"
+  maturity: alpha
+  maintainers:
+    - name: Julian Nodorp
+      email: jnodorp@jaconi.io
+  minKubeVersion: 1.12.0
+  provider:
+    name: jaconi
+  labels:
+    app.kubernetes.io/component: chartserviceversion
+    app.kubernetes.io/version: latest
+  links:
+    - name: Documentation
+      url: https://docs.litmuschaos.io/docs/getstarted/
+  icon:
+    - url: https://raw.githubusercontent.com/jaconi-io/litmus/main/charts/gcp/icons/gcp-vm-stop.png
+      mediatype: image/png
+  chaosexpcrdlink: https://raw.githubusercontent.com/jaconi-io/litmus/main/charts/gcp/gcp-vm-stop/experiment.yaml

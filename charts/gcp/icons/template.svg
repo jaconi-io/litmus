@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="512px" height="512px">
+    <g id="logo">
+        <rect fill="#aecbfa" x="9" y="9" width="6" height="6" />
+        <rect fill="#669df6" x="11" y="2" width="2" height="4" />
+        <rect fill="#669df6" x="7" y="2" width="2" height="4" />
+        <rect fill="#669df6" x="15" y="2" width="2" height="4" />
+        <rect fill="#4285f4" x="11" y="18" width="2" height="4" />
+        <rect fill="#4285f4" x="7" y="18" width="2" height="4" />
+        <rect fill="#4285f4" x="15" y="18" width="2" height="4" />
+        <rect fill="#4285f4" x="19" y="10" width="2" height="4" transform="translate(8 32) rotate(-90)" />
+        <rect fill="#4285f4" x="19" y="14" width="2" height="4" transform="translate(4 36) rotate(-90)" />
+        <rect fill="#4285f4" x="19" y="6" width="2" height="4" transform="translate(12 28) rotate(-90)" />
+        <rect fill="#669df6" x="3" y="10" width="2" height="4" transform="translate(-8 16) rotate(-90)" />
+        <rect fill="#669df6" x="3" y="14" width="2" height="4" transform="translate(-12 20) rotate(-90)" />
+        <rect fill="#669df6" x="3" y="6" width="2" height="4" transform="translate(-4 12) rotate(-90)" />
+        <path fill="#aecbfa" d="M5,5V19H19V5ZM17,17H7V7H17Z" />
+        <polygon fill="#669df6" points="9 15 15 15 12 12 9 15" />
+        <polygon fill="#4285f4" points="12 12 15 15 15 9 12 12" />
+    </g>
+    <g id="modifier" fill="#b00020">
+        <!--
+        <path id="kill" d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/>
+        <path id="restart" transform="scale(-1,1) translate(-24, 0)" d="M6,13c0-1.65,0.67-3.15,1.76-4.24L6.34,7.34C4.9,8.79,4,10.79,4,13c0,4.08,3.05,7.44,7,7.93v-2.02 C8.17,18.43,6,15.97,6,13z M20,13c0-4.42-3.58-8-8-8c-0.06,0-0.12,0.01-0.18,0.01l1.09-1.09L11.5,2.5L8,6l3.5,3.5l1.41-1.41 l-1.08-1.08C11.89,7.01,11.95,7,12,7c3.31,0,6,2.69,6,6c0,2.97-2.17,5.43-5,5.91v2.02C16.95,20.44,20,17.08,20,13z" />
+        -->
+    </g>
+</svg>

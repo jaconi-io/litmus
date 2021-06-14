@@ -1,0 +1,6 @@
+**
+!environment/
+!experiments/
+!go.mod
+!go.sum
+!main.go

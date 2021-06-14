@@ -1,0 +1,86 @@
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: gcp-vm-stop-sa
+  namespace: default
+  labels:
+    name: gcp-vm-stop-sa
+    app.kubernetes.io/part-of: litmus
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: gcp-vm-stop-sa
+  namespace: default
+  labels:
+    name: gcp-vm-stop-sa
+    app.kubernetes.io/part-of: litmus
+rules:
+  - apiGroups:
+      - litmuschaos.io
+    resources:
+      - chaosengines
+    verbs:
+      - get
+      - update
+  - apiGroups:
+      - litmuschaos.io
+    resources:
+      - chaosexperiments
+    verbs:
+      - get
+      - list
+  - apiGroups:
+      - litmuschaos.io
+    resources:
+      - chaosresults
+    verbs:
+      - create
+      - get
+      - list
+      - patch
+      - update
+  - apiGroups:
+      - ""
+    resources:
+      - events
+    verbs:
+      - create
+      - get
+      - update
+  - apiGroups:
+      - ""
+    resources:
+      - pods
+    verbs:
+      - get
+  - apiGroups:
+      - batch
+    resources:
+      - jobs
+    verbs:
+      - create
+  - apiGroups:
+      - ""
+    resources:
+      - secrets
+    verbs:
+      - get
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: gcp-vm-stop-sa
+  namespace: default
+  labels:
+    name: gcp-vm-stop-sa
+    app.kubernetes.io/part-of: litmus
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: gcp-vm-stop-sa
+subjects:
+  - kind: ServiceAccount
+    name: gcp-vm-stop-sa
+    namespace: default
