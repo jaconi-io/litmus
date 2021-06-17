@@ -3,3 +3,6 @@ experiments:
   - name: gcp-vm-stop
     CSV: gcp-vm-stop.chartserviceversion.yaml
     desc: "gcp-vm-stop"
+  - name: gcp-vm-restart
+    CSV: gcp-vm-restart.chartserviceversion.yaml
+    desc: "gcp-vm-restart"

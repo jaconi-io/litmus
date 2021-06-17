@@ -1,0 +1,61 @@
+apiVersion: litmuschaos.io/v1alpha1
+description:
+  message: Restart a virtual machine instance
+kind: ChaosExperiment
+metadata:
+  name: gcp-vm-restart
+  labels:
+    name: gcp-vm-restart
+    app.kubernetes.io/part-of: litmus
+    app.kubernetes.io/component: chaosexperiment
+    app.kubernetes.io/version: latest
+spec:
+  definition:
+    args:
+      - --experiment
+      - gcp-vm-restart
+    env:
+      - name: GOOGLE_APPLICATION_CREDENTIALS
+        value: /var/gcp/key.json
+      - name: GCP_INSTANCE
+        value: ""
+      - name: GCP_PROJECT
+        value: ""
+      - name: GCP_ZONE
+        value: ""
+    image: jaconi/litmus:main
+    imagePullPolicy: Always
+    labels:
+      app.kubernetes.io/component: experiment-job
+      app.kubernetes.io/name: gcp-vm-restart
+      app.kubernetes.io/part-of: litmus
+      app.kubernetes.io/version: latest
+    scope: Cluster
+    permissions:
+      - apiGroups:
+          - ""
+          - "batch"
+          - "apps"
+          - "litmuschaos.io"
+        resources:
+          - "jobs"
+          - "pods"
+          - "pods/log"
+          - "events"
+          - "deployments"
+          - "replicasets"
+          - "pods/exec"
+          - "chaosengines"
+          - "chaosexperiments"
+          - "chaosresults"
+        verbs:
+          - "create"
+          - "list"
+          - "get"
+          - "patch"
+          - "update"
+          - "delete"
+          - "deletecollection"
+    secrets:
+      - name: gcp-vm-restart
+        mountPath: /var/gcp

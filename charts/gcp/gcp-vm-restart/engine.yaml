@@ -1,0 +1,31 @@
+apiVersion: litmuschaos.io/v1alpha1
+kind: ChaosEngine
+metadata:
+  name: gcp-vm-restart
+spec:
+  # We are working inside GCP and might not have a Kubernetes application at hand.
+  annotationCheck: "false"
+
+  engineState: active
+  auxiliaryAppInfo: ""
+  chaosServiceAccount: gcp-vm-restart-sa
+  experiments:
+    - name: gcp-vm-restart
+      spec:
+        components:
+          env:
+            # Google application credentials file.
+            - name: GOOGLE_APPLICATION_CREDENTIALS
+              value: /var/gcp/key.json
+            # The virtual machine instance to restart.
+            - name: GCP_INSTANCE
+              value: ~
+            # The virtual machine instances project.
+            - name: GCP_PROJECT
+              value: ~
+            # The virtual machine instances zone.
+            - name: GCP_ZONE
+              value: ~
+          secrets:
+            - name: gcp-vm-restart
+              mountPath: /var/gcp

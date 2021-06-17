@@ -10,6 +10,7 @@ spec:
   categoryDescription: Chaos Engineering for GCP
   experiments:
     - gcp-vm-stop
+    - gcp-vm-restart
   keywords:
     - "gcp"
   maintainers:

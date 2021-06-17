@@ -15,7 +15,8 @@ import (
 )
 
 var exps = map[string]func(clients.ClientSets) error{
-	"gcp-vm-stop": experiments.GCPVMStop,
+	"gcp-vm-stop":    experiments.GCPVMStop,
+	"gcp-vm-restart": experiments.GCPVMRestart,
 }
 
 func main() {
