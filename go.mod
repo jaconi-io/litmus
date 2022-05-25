@@ -6,7 +6,7 @@ require (
 	github.com/kelseyhightower/envconfig v1.4.0
 	github.com/litmuschaos/chaos-operator v0.0.0-20210610071657-a58dbd939e73
 	github.com/litmuschaos/litmus-go v0.0.0-20210612112947-e229c7334871
-	github.com/stretchr/testify v1.7.0
+	github.com/stretchr/testify v1.7.1
 	google.golang.org/api v0.81.0
 	k8s.io/apimachinery v0.21.1
 	k8s.io/client-go v12.0.0+incompatible
