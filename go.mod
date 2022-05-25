@@ -4,7 +4,7 @@ go 1.16
 
 require (
 	github.com/kelseyhightower/envconfig v1.4.0
-	github.com/litmuschaos/chaos-operator v0.0.0-20210906054553-064706497fb6
+	github.com/litmuschaos/chaos-operator v0.0.0-20220416174020-ab6601573f12
 	github.com/litmuschaos/litmus-go v0.0.0-20220513035354-111534cf321d
 	github.com/stretchr/testify v1.7.1
 	google.golang.org/api v0.81.0
