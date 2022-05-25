@@ -7,7 +7,6 @@ RUN go build
 
 FROM scratch
 
-# Copy litmus to /bin/bash until https://github.com/litmuschaos/chaos-runner/issues/152 is resolved.
-COPY --from=builder /litmus /bin/bash
+COPY --from=builder /litmus /litmus
 COPY --from=builder /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/
-ENTRYPOINT ["/bin/bash"]
+ENTRYPOINT ["/litmus"]

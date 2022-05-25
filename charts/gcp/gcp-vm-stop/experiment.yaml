@@ -12,6 +12,8 @@ metadata:
     app.kubernetes.io/version: latest
 spec:
   definition:
+    command:
+      - /litmus
     args:
       - --experiment
       - gcp-vm-stop
